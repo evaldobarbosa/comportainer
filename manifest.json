@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Portainer Docker Exec",
+  "version": "1.0",
+  "description": "Obtém o comando 'docker exec' para um container no Portainer",
+  "permissions": ["activeTab", "scripting", "clipboardWrite"],
+  "action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "48": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.your-website.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
